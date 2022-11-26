@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto:wght@400;700&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+
+.conteudo {
+    max-width: 1025px;
+    width: auto;
+    min-height: 839px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 59px 53px 59px 38px
+}
+
+.superior {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.imagem img {
+    width: 400px;
+    height: 466px;
+}
+
+.palavras {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.escolher-palavra {
+    width: 200px;
+    height: 60px;
+    margin-top: 30px;
+    background: #27AE60;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.palavra-sorteada {
+    height: 68px;
+    width: 100%;
+    margin-bottom: 27px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 68px;
+    text-align: center;
+}
+
+.inferior {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.teclado {
+    height: 91px;
+    width: 664px;
+}
+
+.letra {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(0deg, #E1ECF4, #E1ECF4);
+    border-radius: 3px;
+    border: 1px solid #7AA7C7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    color: #39739D;
+    margin: 0 12px 11px 0;
+    cursor: pointer;
+}
+
+.letra:nth-child(13), .letra:nth-child(26) {
+    margin-right: 0px;
+}
+
+.chute {
+    width: 624px;
+    height: 40px;
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chute p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.chute button {
+    height: 40px;
+    width: 100px;
+    border-radius: 3px;
+    background: linear-gradient(0deg, #E1ECF4, #E1ECF4);
+    border: 1px solid #7AA7C7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    color: #3C76A1;
+    cursor: pointer;
+}
+
+.campo-chute {
+    height: 40px;
+    width: 353px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px 0px #00000040;
+}
+
