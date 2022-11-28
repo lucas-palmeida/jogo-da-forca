@@ -17,8 +17,9 @@ export default function Letras(props) {
         else {
             props.letras.setErros(props.letras.erros + 1);
             if(props.letras.erros === 5) {
-                props.letras.setPalavraOculta(props.letras.palavra);
+                props.letras.setPalavraOculta(props.letras.palavraSorteada);
                 props.letras.setJogoComecou(false);
+                props.letras.setFinal("perdeu");
             }
         }
         verificarVitoria(palavraOcultaAtualizada);

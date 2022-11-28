@@ -6,8 +6,10 @@ export default function Chute(props) {
       props.chute.setErros(6);
       props.chute.setFinal("perdeu");
     }
+    else {
+      props.chute.setFinal("ganhou");
+    }
     props.chute.setPalavraOculta(props.chute.palavraSorteada);
-    props.chute.setFinal("ganhou");
     props.chute.setJogoComecou(false);
     props.chute.setChute('');
   }
