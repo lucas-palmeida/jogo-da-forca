@@ -1,26 +1,50 @@
+import React, { useState } from "react";
+import Jogo from "./components/Jogo";
+import Letras from "./components/Letras";
+import Chute from "./components/Chute";
+
+import forca0 from "./assets/images/forca0.png";
+import forca1 from "./assets/images/forca1.png";
+import forca2 from "./assets/images/forca2.png";
+import forca3 from "./assets/images/forca3.png";
+import forca4 from "./assets/images/forca4.png";
+import forca5 from "./assets/images/forca5.png";
+import forca6 from "./assets/images/forca6.png";
+
 export default function App() {
-  const letra = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  const forcas = [forca0, forca1, forca2, forca3, forca4, forca5, forca6];
+  const [palavraSorteada, setPalavraSorteada] = useState("");
+  const [palavraOculta, setPalavraOculta] = useState("");
+  const [letrasUsadas, setLetrasUsadas] = useState([]);
+  const [erros, setErros] = useState(0);
+  const [chute, setChute] = useState("");
+  const [jogoComecou, setJogoComecou] = useState(false);
+  const [final, setFinal] = useState("");
+
+  const estados = {
+    imagem: forcas[erros],
+    palavraSorteada,
+    palavraOculta,
+    letrasUsadas,
+    erros,
+    chute,
+    jogoComecou,
+    final,
+    setPalavraSorteada,
+    setPalavraOculta,
+    setLetrasUsadas,
+    setErros,
+    setChute,
+    setJogoComecou,
+    setFinal,
+  };
+
   return (
     <div className="conteudo">
-      <div className="superior">
-        <div className="imagem">
-          <img src="assets/images/forca0.png" alt="forca" />
-        </div>
-        <div className="palavras">
-          <button className="escolher-palavra">Escolher Palavra</button>
-          <p className="palavra-sorteada">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-          {/* 16 */}
-        </div>
-      </div>
+      <Jogo jogo={estados} />
       <div className="inferior">
-        <div className="teclado">
-          {letra.map((l) => <button className="letra">{l}</button>)}
-        </div>
-        <div className="chute">
-          <p>Já sei a palavra!</p>
-          <input type="text" className="campo-chute"></input>
-          <button>Chutar</button>
-        </div>
+        <Letras letras={estados} />
+        <Chute chute={estados} />
       </div>
     </div>
   );
